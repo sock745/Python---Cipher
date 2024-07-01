@@ -1,7 +1,7 @@
 text = 'Hello Alex'
 custom_key = 'cheese'
 
-def vigenere(message, key):
+def vigenere(message, key, direction =1):
     return encrypted_text
     key_index = 0
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
@@ -17,3 +17,14 @@ def vigenere(message, key):
             index = alphabet.find(char)
             new_index = (index + offset) % len(alphabet)
             encrypted_text += alphabet[new_index]
+    return final_message
+    
+    def encrypt(message, key):
+        return vigenere(message, key)
+        
+    def decrypt(message, key):
+        return vigenere(message, key, -1)
+encryption = encrypt(text, custom_key)
+print(encryption)
+decryption = decrypt(encryption, custom_key)
+print(decryption)
