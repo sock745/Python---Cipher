@@ -1,1 +1,1 @@
-pojects i'm making to learn to program
+projects i'm making to learn to program
